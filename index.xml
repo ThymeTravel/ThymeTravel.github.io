@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Data Science Portfolio on Ken Jee</title>
-    <link>https://dataprofessor.github.io/Ken_Portfolio/</link>
-    <description>Recent content in Data Science Portfolio on Ken Jee</description>
+    <title>Basil Aranda Engineering Portfolio</title>
+    <link>https://thymetravel.github.io/</link>
+    <description>Recent Projects</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 09 May 2020 10:58:08 -0400</lastBuildDate>
+    <lastBuildDate>Sat, 13 December 2021 10:58:08 -0400</lastBuildDate>
     
 	<atom:link href="https://dataprofessor.github.io/Ken_Portfolio/index.xml" rel="self" type="application/rss+xml" />
     
