@@ -1,5 +1,5 @@
 # Basil Aranda
-Simple engineering portfolio
+Aerospace Engineering at Cal Poly Pomona. This is a super simple engineering portfolio
 
 
 
