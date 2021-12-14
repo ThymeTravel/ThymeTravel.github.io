@@ -1,2 +1,4 @@
-# Ken_Portfolio
-A data science portfolio of Ken Jee.
+# Basil Aranda
+Simple engineering portfolio
+
+thymetravel.github.io/
