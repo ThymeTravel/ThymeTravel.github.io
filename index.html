@@ -1,329 +1,441 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    
-    <title>Engineering Portfolio | Basil Aranda</title>
-    <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="generator" content="Hugo 0.70.0" />
-    
-    
-      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-    
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Basil Aranda — Aerospace &amp; Design Engineer</title>
 
-    
-    
-      <link href="https://dataprofessor.github.io/Ken_Portfolio/dist/css/app.1cb140d8ba31d5b2f1114537dd04802a.css" rel="stylesheet">
-    
+  <!-- Discoverable now (the old site was set to NOINDEX). -->
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Basil Aranda">
+  <meta name="description" content="Basil Aranda — aerospace and design engineer at Anduril Industries, formerly Lockheed Martin Skunk Works. Published AIAA researcher. Design, systems integration, and rapid prototyping of autonomous aerospace systems.">
 
-    
+  <!-- Open Graph -->
+  <meta property="og:title" content="Basil Aranda — Aerospace &amp; Design Engineer">
+  <meta property="og:description" content="Design and systems engineer at Anduril. Ex–Lockheed Martin Skunk Works. Published AIAA researcher.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thymetravel.github.io/">
+  <meta property="og:image" content="https://thymetravel.github.io/images/MissionRender1.JPG">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Basil Aranda — Aerospace &amp; Design Engineer">
+  <meta name="twitter:description" content="Design and systems engineer at Anduril. Ex–Lockheed Martin Skunk Works. Published AIAA researcher.">
 
-    
-      
-    
+  <style>
+    :root{
+      --bg:#f7f9fb;
+      --panel:#ffffff;
+      --ink:#141a24;
+      --muted:#5a6472;
+      --line:#e5e9ef;
+      --accent:#6b5cff;      /* vaporwave-leaning indigo */
+      --accent-2:#ff6ec7;    /* magenta */
+      --accent-3:#38e0d0;    /* teal */
+      --maxw:1040px;
+      --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+      --sans:"Avenir Next","Avenir","Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    }
+    *{box-sizing:border-box;}
+    html{scroll-behavior:smooth;}
+    body{
+      margin:0;background:var(--bg);color:var(--ink);
+      font-family:var(--sans);font-size:17px;line-height:1.65;
+      -webkit-font-smoothing:antialiased;
+    }
+    a{color:var(--accent);text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    img{max-width:100%;display:block;}
+    h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.15;color:var(--ink);}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+    .eyebrow{font-family:var(--sans);text-transform:uppercase;letter-spacing:.18em;
+      font-size:12px;font-weight:700;color:var(--accent);margin:0 0 10px;}
 
-    
-    
-      <link href="https://dataprofessor.github.io/Ken_Portfolio/index.xml" rel="alternate" type="application/rss+xml" title="Ken Jee" />
-      <link href="https://dataprofessor.github.io/Ken_Portfolio/index.xml" rel="feed" type="application/rss+xml" title="Ken Jee" />
-      
-    
-    
-    <meta property="og:title" content="Basil Aranda Engineering Portfolio" />
-<meta property="og:description" content="Aerospace Engineer" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://thymetravel.github.io/" />
-<meta property="og:updated_time" content="2020-05-09T10:58:08-04:00" />
-<meta itemprop="name" content="Basil Aranda Engineering Portfolio">
-<meta itemprop="description" content="Aerospace Engineer"><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Basil Aranda Engineering Portfolio"/>
-<meta name="twitter:description" content="Aerospace Engineer"/>
+    /* ---- Sticky top bar ---- */
+    header.topbar{
+      position:sticky;top:0;z-index:50;
+      background:rgba(247,249,251,.88);backdrop-filter:saturate(140%) blur(8px);
+      border-bottom:1px solid var(--line);
+    }
+    .topbar .wrap{display:flex;align-items:center;justify-content:space-between;
+      min-height:60px;flex-wrap:wrap;gap:8px;}
+    .brand{font-family:var(--serif);font-weight:600;font-size:19px;color:var(--ink);}
+    .brand:hover{text-decoration:none;}
+    nav.main a{color:var(--muted);font-size:14px;font-weight:600;margin-left:18px;
+      font-family:var(--sans);}
+    nav.main a:hover{color:var(--accent);text-decoration:none;}
+    @media(max-width:640px){nav.main a{margin:0 14px 0 0;font-size:13px;}}
 
-  </head>
+    /* ---- Hero ---- */
+    .hero{
+      position:relative;color:#fff;text-align:center;
+      background:linear-gradient(180deg,rgba(10,12,20,.55),rgba(10,12,20,.72)),
+                 url('https://thymetravel.github.io/images/Vaporwave1.jpg') center/cover no-repeat;
+    }
+    .hero .wrap{padding:110px 24px 120px;}
+    .hero h1{color:#fff;font-size:clamp(38px,7vw,72px);margin:0 0 6px;letter-spacing:.5px;}
+    .hero .role{font-family:var(--sans);font-weight:300;font-size:clamp(17px,2.4vw,23px);
+      color:rgba(255,255,255,.92);margin:0 auto 26px;max-width:640px;}
+    .hero .location{font-family:var(--sans);font-size:13px;letter-spacing:.14em;
+      text-transform:uppercase;color:rgba(255,255,255,.75);}
+    .cta{display:inline-flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:30px;}
+    .btn{display:inline-block;padding:11px 22px;border-radius:999px;font-weight:600;
+      font-family:var(--sans);font-size:15px;}
+    .btn.solid{background:#fff;color:#141a24;}
+    .btn.solid:hover{background:#eef0f6;text-decoration:none;}
+    .btn.ghost{border:1.5px solid rgba(255,255,255,.7);color:#fff;}
+    .btn.ghost:hover{background:rgba(255,255,255,.12);text-decoration:none;}
+    .accent-rule{height:5px;border:0;margin:0;
+      background:linear-gradient(90deg,var(--accent-2),var(--accent),var(--accent-3));}
 
-  <body class="ma0 avenir bg-near-white">
+    /* ---- Sections ---- */
+    section{padding:78px 0;}
+    section.alt{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+    section[id]{scroll-margin-top:68px;}
+    .section-head{max-width:720px;margin-bottom:38px;}
+    .section-head h2{font-size:clamp(28px,4vw,38px);margin:0 0 10px;}
+    .section-head p{color:var(--muted);margin:0;font-size:17px;}
 
-    
+    /* ---- About ---- */
+    .about-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:44px;align-items:center;}
+    .about-grid img{border-radius:14px;box-shadow:0 18px 40px rgba(20,26,36,.18);}
+    .about-grid p{color:#3c4453;margin:0 0 16px;}
+    .creed{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--ink);
+      border-left:3px solid var(--accent);padding-left:16px;margin:22px 0 0;}
+    @media(max-width:760px){.about-grid{grid-template-columns:1fr;gap:26px;}}
 
-  
-  
-  <header class="cover bg-top" style="background-image: url('https://thymetravel.github.io/images/Vaporwave1.jpg');">
-    <div class="bg-black-60">
-      <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l justify-between items-center center">
-    <a href="https://thymetravel.github.io/" class="f3 fw2 hover-white no-underline white-90 dib">
-      Basil Aranda
-    </a>
-    <div class="flex-l items-center">
-      
+    /* ---- Chips ---- */
+    .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px;}
+    .chip{background:var(--bg);border:1px solid var(--line);border-radius:999px;
+      padding:7px 15px;font-size:14px;font-weight:600;color:#3c4453;font-family:var(--sans);}
+    .chip.clear{border-color:var(--accent);color:var(--accent);}
 
-      
-        <ul class="pl0 mr3">
-          
-          <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="https://thymetravel.github.io/about/" title="About page">
-              About
-            </a>
-          </li>
-          
-          <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="https://thymetravel.github.io/resume/" title="Resume page">
-              Resume
-            </a>
-          </li>
+    /* ---- Experience ---- */
+    .timeline{border-left:2px solid var(--line);margin-left:6px;}
+    .job{position:relative;padding:0 0 30px 28px;}
+    .job:last-child{padding-bottom:0;}
+    .job::before{content:"";position:absolute;left:-8px;top:5px;width:14px;height:14px;
+      border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--bg);}
+    .job h3{margin:0;font-size:20px;font-family:var(--sans);font-weight:700;}
+    .job .meta{color:var(--muted);font-size:14px;margin:2px 0 8px;font-weight:600;}
+    .job p{margin:0;color:#3c4453;font-size:16px;}
 
-          <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="https://thymetravel.github.io/contact/" title="Contact page">
-              Contact
-            </a>
-          </li>
-          
-          <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="https://thymetravel.github.io/post/" title="Projects page">
-              Projects/Publications
-            </a>
-          </li>
+    /* ---- Projects ---- */
+    .project{display:grid;grid-template-columns:0.9fr 1.1fr;gap:30px;align-items:center;
+      background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;
+      margin-bottom:26px;transition:transform .2s ease,box-shadow .2s ease;}
+    .project:hover{transform:translateY(-3px);box-shadow:0 20px 44px rgba(20,26,36,.12);}
+    .project .thumb{height:100%;min-height:230px;
+      background:#0b0e16 center/cover no-repeat;}
+    .project .body{padding:26px 30px 26px 4px;}
+    .project h3{font-size:24px;margin:0 0 4px;}
+    .project .tag{font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.12em;
+      text-transform:uppercase;color:var(--accent);}
+    .project p{color:#3c4453;margin:12px 0 16px;font-size:16px;}
+    .project .links a{font-weight:600;margin-right:18px;font-size:15px;}
+    @media(max-width:720px){.project{grid-template-columns:1fr;}.project .thumb{min-height:200px;}
+      .project .body{padding:22px 24px;}}
 
-          <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="https://thymetravel.github.io/photography/" title="Photography page">
-              Photography
-            </a>
-          </li>
+    /* ---- Photography ---- */
+    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+    .gallery a{overflow:hidden;border-radius:10px;aspect-ratio:1/1;background:#dfe4ea;}
+    .gallery img{width:100%;height:100%;object-fit:cover;transition:transform .45s ease;filter:saturate(.96);}
+    .gallery a:hover img{transform:scale(1.07);}
+    @media(max-width:820px){.gallery{grid-template-columns:repeat(3,1fr);}}
+    @media(max-width:520px){.gallery{grid-template-columns:repeat(2,1fr);}}
 
-          
-        </ul>
-      
-      
+    /* ---- Band (image divider) ---- */
+    .band{position:relative;color:#fff;text-align:center;padding:64px 0;
+      background:linear-gradient(180deg,rgba(10,12,20,.5),rgba(10,12,20,.6)),
+                 url('https://thymetravel.github.io/images/u2Plane1.png') center/cover fixed no-repeat;}
+    .band h2{color:#fff;font-size:clamp(24px,4vw,34px);margin:0 auto;max-width:760px;}
+    .band p{color:rgba(255,255,255,.85);max-width:640px;margin:12px auto 0;}
 
+    /* ---- Contact ---- */
+    .contact-grid{display:flex;flex-wrap:wrap;gap:14px;}
+    .contact-card{flex:1 1 200px;background:var(--panel);border:1px solid var(--line);
+      border-radius:14px;padding:22px 24px;}
+    .contact-card .k{font-size:13px;letter-spacing:.12em;text-transform:uppercase;
+      color:var(--muted);font-weight:700;font-family:var(--sans);}
+    .contact-card .v{font-size:17px;font-weight:600;margin-top:4px;word-break:break-word;}
 
+    /* ---- Fun / games ---- */
+    .games{display:flex;gap:14px;flex-wrap:wrap;margin-top:18px;}
+    .games a{display:inline-flex;align-items:center;gap:10px;background:var(--bg);
+      border:1px solid var(--line);border-radius:12px;padding:12px 18px;font-weight:700;
+      font-family:var(--sans);color:var(--ink);}
+    .games a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none;}
 
+    /* ---- Footer ---- */
+    footer.site{background:#0c0f17;color:#aeb6c4;padding:40px 0;}
+    footer.site .wrap{display:flex;justify-content:space-between;align-items:center;
+      flex-wrap:wrap;gap:16px;}
+    footer.site a{color:#cdd4e0;}
+    .social a{display:inline-flex;margin-left:14px;}
+    .social svg{width:26px;height:26px;fill:#cdd4e0;transition:fill .2s ease;}
+    .social a:hover svg{fill:#fff;}
+    .muted{color:var(--muted);}
+  </style>
+</head>
+<body>
 
-
-
-
-
-
-
-<a href="https://www.linkedin.com/in/basil-aranda/" target="_blank" class="link-transition linkedin link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
-  <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
-</svg>
-
-<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
-<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
-</svg>
-</span></a>
-
-
-<a href="https://github.com/ThymeTravel" target="_blank" class="link-transition github link dib z-999 pt3 pt0-l mr1" title="Github link" rel="noopener" aria-label="follow on Github——Opens in a new window">
-  <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
-  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
-</svg>
-
-<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
-<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
-</svg>
-</span></a>
-
-
-
-
-
-
-
-    </div>
-  </div>
-</nav>
-
-      <div class="tc-l pv4 pv6-l ph3 ph4-ns">
-        <h1 class="f2 f-subheadline-l fw2 white-90 mb0 lh-title">
-          Basil Aranda <br> Engineering Portfolio
-        </h1>
-        
-          <h2 class="fw1 f5 f3-l white-80 measure-wide-l center mt3">
-            
-          </h2>
-        
-      </div>
+  <!-- ================= TOP BAR ================= -->
+  <header class="topbar">
+    <div class="wrap">
+      <a class="brand" href="#top">Basil Aranda</a>
+      <nav class="main">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#photography">Photography</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
   </header>
 
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="top" style="padding:0;">
+    <div class="wrap">
+      <p class="eyebrow" style="color:#fff;opacity:.85;">Aerospace &amp; Design Engineer</p>
+      <h1>Basil Aranda</h1>
+      <p class="role">I design and build autonomous aerospace systems at Anduril Industries — bringing a builder's eye from Lockheed&nbsp;Martin's Skunk&nbsp;Works to the design table.</p>
+      <p class="location">Huntington Beach, California</p>
+      <div class="cta">
+        <a class="btn solid" href="#projects">See my work</a>
+        <a class="btn ghost" href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </section>
+  <hr class="accent-rule">
 
-    <main class="pb7" role="main">
-      
-  <article class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy mid-gray">
-    <p>I really like engineering. This portfolio contains my resume and some of my cool projects/research documents.</p>
+  <!-- ================= ABOUT ================= -->
+  <section id="about">
+    <div class="wrap">
+      <div class="about-grid">
+        <img src="https://thymetravel.github.io/images/basilshuttle.png" alt="Basil Aranda">
+        <div>
+          <p class="eyebrow">About</p>
+          <h2 style="font-size:clamp(26px,4vw,36px);margin:0 0 18px;">Engineer, builder, and a believer in improving life for all humanity.</h2>
+          <p>I'm an aerospace and design engineer at <strong>Anduril Industries</strong>, where I work across design, systems integration, and manufacturing on autonomous defense systems. Before Anduril I was a manufacturing engineer at <strong>Lockheed Martin's Skunk Works</strong>, supporting advanced development of unmanned jet aircraft — the place that taught me how real hardware actually gets built.</p>
+          <p>I took a nontraditional road to get here: I started at community college, transferred to <strong>Cal Poly Pomona</strong>, and graduated <strong>magna cum laude</strong> in Aerospace Engineering with a minor in Astronomy. Along the way I interned at Aerojet Rocketdyne, NASA Armstrong, and NASA Stennis, and published aerospace research with the AIAA. That path is the thing I'm proudest of — it's why I care about building things that matter, and about widening the door for the people coming up behind me.</p>
+          <p>Today I'm focused on moving deeper into design and systems engineering, with a long-term goal of a PhD and technical leadership. I like the hard, hands-on problems — the ones that live at the intersection of design intent and what the shop floor can actually deliver.</p>
+          <p class="creed">"I hope to one day push the envelope of engineering and science."</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  </article>
-  
-  
-  
-  
-  
-  
-  
-    
-    
+  <!-- ================= SKILLS ================= -->
+  <section id="skills" class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Capabilities</p>
+        <h2>What I bring to the table</h2>
+        <p>Design-forward, manufacturing-informed, and comfortable owning a problem end to end.</p>
+      </div>
+      <h3 style="font-family:var(--sans);font-size:15px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 10px;">Design &amp; CAD</h3>
+      <div class="chips" style="margin-bottom:22px;">
+        <span class="chip">SolidWorks</span>
+        <span class="chip">PTC Creo</span>
+        <span class="chip">Fusion 360</span>
+        <span class="chip">Siemens NX</span>
+        <span class="chip">GD&amp;T</span>
+        <span class="chip">Design for Manufacturing</span>
+      </div>
+      <h3 style="font-family:var(--sans);font-size:15px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 10px;">Analysis &amp; Code</h3>
+      <div class="chips" style="margin-bottom:22px;">
+        <span class="chip">MATLAB</span>
+        <span class="chip">Simulink</span>
+        <span class="chip">Python</span>
+        <span class="chip">Computational Fluid Dynamics</span>
+        <span class="chip">LaTeX</span>
+      </div>
+      <h3 style="font-family:var(--sans);font-size:15px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:0 0 10px;">Hardware &amp; Process</h3>
+      <div class="chips">
+        <span class="chip">Rapid Prototyping</span>
+        <span class="chip">Composites</span>
+        <span class="chip">Hands-on Fabrication</span>
+        <span class="chip">Systems Integration</span>
+        <span class="chip">Cross-functional Ownership</span>
+        <span class="chip clear">Active Security Clearance</span>
+      </div>
+    </div>
+  </section>
 
-    <div class="pa3 pa4-ns w-100 w-70-ns center">
-      
-       
-          <h1 class="flex-none">
-            Recent Projects
-          </h1>
-        
+  <!-- ================= EXPERIENCE ================= -->
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Experience</p>
+        <h2>Where I've built</h2>
+      </div>
+      <div class="timeline">
+        <div class="job">
+          <h3>Anduril Industries — Aerospace / Manufacturing Engineer</h3>
+          <div class="meta">Costa Mesa, CA · May 2025 – Present</div>
+          <p>Design, systems integration, and manufacturing engineering on autonomous defense systems. Cross-functional owner across mechanical design, test, and production readiness.</p>
+        </div>
+        <div class="job">
+          <h3>Lockheed Martin, Skunk Works — Manufacturing Engineer</h3>
+          <div class="meta">Palmdale, CA · Aug 2023 – May 2025</div>
+          <p>Advanced Development Programs supporting unmanned jet aircraft — from engineering solutions on the floor to driving capital and process projects.</p>
+        </div>
+        <div class="job">
+          <h3>Internships — Aerojet Rocketdyne · NASA Armstrong · NASA Stennis</h3>
+          <div class="meta">2019 – 2022</div>
+          <p>Component engineering and thruster design (Aerojet Rocketdyne); controls engineering and quadcopter flight controls (NASA Armstrong); program planning (NASA Stennis).</p>
+        </div>
+        <div class="job">
+          <h3>Cal Poly Pomona — B.S. Aerospace Engineering, <em>magna cum laude</em></h3>
+          <div class="meta">Minor in Astronomy · GPA 3.76 · via College of the Canyons (transfer)</div>
+          <p>Published AIAA researcher. Former Student Trustee and MESA tutor during my community-college years.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      
+  <!-- ================= PROJECTS ================= -->
+  <section id="projects" class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Projects &amp; Publications</p>
+        <h2>Selected work</h2>
+        <p>Design and research projects that show how I think — from mission architecture to computational analysis.</p>
+      </div>
 
-      <section class="w-100 mw8">
-        
-        
-          <div class="relative w-100 mb4">
-    
-<article class="bb b--black-10">
-<div class="db pv4 ph3 ph0-l no-underline dark-gray">
-  <div class="flex flex-column flex-row-ns">
-    
-        
-      
-      <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
-        <a href="https://thymetravel.github.io/post/project-3/" class="db grow">
-          <img src="https://thymetravel.github.io/images/MissionRender1.JPG" class="img" alt=" Mars Ascent Vehicle Render">
+      <!-- MAVERICK (lead / strongest) -->
+      <article class="project">
+        <div class="thumb" style="background-image:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.25)),url('https://thymetravel.github.io/images/MissionRender1.JPG');"></div>
+        <div class="body">
+          <span class="tag">AIAA Publication · 2nd Nationally</span>
+          <h3>MAVERICK — Dual Mars Ascent Vehicle</h3>
+          <p>Conceptual design and mission profile for a dual Mars Ascent Vehicle, developed for an undergraduate space design competition where it placed 2nd in the nation. The work covered vehicle configuration, staging, and mission architecture for returning samples off the Martian surface, and was published by the American Institute of Aeronautics and Astronautics. Faculty advisor: Dr. Navid Nakhjiri.</p>
+          <div class="links">
+            <a href="https://doi.org/10.2514/6.2023-4779" target="_blank" rel="noopener">Read the paper (DOI: 10.2514/6.2023-4779) ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Panel Method CFD -->
+      <article class="project">
+        <div class="thumb" style="background-image:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.25)),url('https://thymetravel.github.io/post/images/n250minus1.png');"></div>
+        <div class="body">
+          <span class="tag">Computational Fluid Dynamics · Python</span>
+          <h3>Panel Method Fluid Dynamics</h3>
+          <p>A from-scratch panel-method solver in Python modeling potential flow around a cylinder, with and without rotation — capturing lift generation via the Magnus effect. Built with full support for varying panel resolution to study convergence, with the accompanying technical paper written in LaTeX.</p>
+          <div class="links">
+            <a href="https://github.com/ThymeTravel" target="_blank" rel="noopener">Code on GitHub ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Mars Rover -->
+      <article class="project">
+        <div class="thumb" style="background-image:linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.25)),url('https://thymetravel.github.io/images/agnesi.png');"></div>
+        <div class="body">
+          <span class="tag">NASA NCAS · Mission Proposal</span>
+          <h3>Conceptual Mars Rover</h3>
+          <p>A Mars rover concept and mission proposal developed through NASA's National Community College Aerospace Scholars program — an early, formative project spanning rover configuration, instrumentation, and mission rationale that helped set me on the aerospace path.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= IMAGE BAND ================= -->
+  <div class="band">
+    <div class="wrap">
+      <h2>From the shop floor to the design table — I care about hardware that actually flies.</h2>
+      <p>Skunk Works taught me how things get built. I'm bringing that to the front of the design process.</p>
+    </div>
+  </div>
+
+  <!-- ================= PHOTOGRAPHY ================= -->
+  <section id="photography">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Off the clock</p>
+        <h2>Photography</h2>
+        <p>A little of how I see the world when I'm not engineering it — around Los Angeles and California.</p>
+      </div>
+      <div class="gallery">
+        <a href="https://thymetravel.github.io/images/IMG_1968.JPG" target="_blank" rel="noopener"><img src="https://thymetravel.github.io/images/IMG_1968.JPG" alt="Los Angeles street scene" loading="lazy"></a>
+        <a href="https://thymetravel.github.io/images/IMG_1975.JPG" target="_blank" rel="noopener"><img src="https://thymetravel.github.io/images/IMG_1975.JPG" alt="Los Angeles" loading="lazy"></a>
+        <a href="https://thymetravel.github.io/images/IMG_1994.JPG" target="_blank" rel="noopener"><img src="https://thymetravel.github.io/images/IMG_1994.JPG" alt="California" loading="lazy"></a>
+        <a href="https://thymetravel.github.io/images/IMG_2017.JPG" target="_blank" rel="noopener"><img src="https://thymetravel.github.io/images/IMG_2017.JPG" alt="Los Angeles" loading="lazy"></a>
+        <a href="https://thymetravel.github.io/images/IMG_2055.JPG" target="_blank" rel="noopener"><img src="https://thymetravel.github.io/images/IMG_2055.JPG" alt="California" loading="lazy"></a>
+        <a href="https://thymetravel.github.io/images/IMG_2080.JPG" target="_blank" rel="noopener"><img src="https://thymetravel.github.io/images/IMG_2080.JPG" alt="Los Angeles" loading="lazy"></a>
+        <a href="https://thymetravel.github.io/images/IMG_2165.JPG" target="_blank" rel="noopener"><img src="https://thymetravel.github.io/images/IMG_2165.JPG" alt="Los Angeles" loading="lazy"></a>
+        <a href="https://thymetravel.github.io/images/IMG_2190.JPG" target="_blank" rel="noopener"><img src="https://thymetravel.github.io/images/IMG_2190.JPG" alt="California" loading="lazy"></a>
+        <a href="https://thymetravel.github.io/images/IMG_2204.JPG" target="_blank" rel="noopener"><img src="https://thymetravel.github.io/images/IMG_2204.JPG" alt="Los Angeles" loading="lazy"></a>
+        <a href="https://thymetravel.github.io/images/IMG_2254.JPG" target="_blank" rel="noopener"><img src="https://thymetravel.github.io/images/IMG_2254.JPG" alt="Los Angeles" loading="lazy"></a>
+        <a href="https://thymetravel.github.io/images/IMG_2304.JPG" target="_blank" rel="noopener"><img src="https://thymetravel.github.io/images/IMG_2304.JPG" alt="California" loading="lazy"></a>
+        <a href="https://thymetravel.github.io/images/IMG_2331.JPG" target="_blank" rel="noopener"><img src="https://thymetravel.github.io/images/IMG_2331.JPG" alt="Los Angeles" loading="lazy"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Contact</p>
+        <h2>Let's build something</h2>
+        <p>Open to conversations about design engineering, aerospace, and research. The fastest way to reach me is LinkedIn.</p>
+      </div>
+      <div class="contact-grid">
+        <a class="contact-card" href="https://www.linkedin.com/in/basil-aranda/" target="_blank" rel="noopener">
+          <div class="k">LinkedIn</div>
+          <div class="v">/in/basil-aranda</div>
+        </a>
+        <a class="contact-card" href="https://github.com/ThymeTravel" target="_blank" rel="noopener">
+          <div class="k">GitHub</div>
+          <div class="v">@ThymeTravel</div>
+        </a>
+        <!-- TODO Basil: add your preferred email below (replace the href and text), then delete this comment.
+        <a class="contact-card" href="mailto:you@example.com">
+          <div class="k">Email</div>
+          <div class="v">you@example.com</div>
+        </a>
+        -->
+        <a class="contact-card" href="Basil_Aranda_Resume.pdf" target="_blank" rel="noopener">
+          <div class="k">Résumé</div>
+          <div class="v">Download PDF ↗</div>
         </a>
       </div>
-    
-    <div class="blah w-100 w-60-ns pl3-ns">
-      <h1 class="f3 fw1 athelas mt0 lh-title">
-        <a href="https://thymetravel.github.io/post/project-3/" class="color-inherit dim link">
-          Design of Dual Mars Ascent Vehicle MAVERICK
-          </a>
-      </h1>
-      <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-        Link to AIAA ARC for publication, DOI: 10.2514/6.2023-4779
-      </div>
-        <a href="https://thymetravel.github.io/post/project-3/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-      
-    </div>
-  </div>
-</div>
-</article>
 
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-          
-        
-        <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
-          <a href="https://thymetravel.github.io/post/project-1/" class="db grow">
-            <img src="https://thymetravel.github.io/images/agnesi.png" class="img" alt="image from Project 1: NASA NCAS MARS ROVER">
-          </a>
-        </div>
-      
-      <div class="blah w-100 w-60-ns pl3-ns">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="https://thymetravel.github.io/post/project-1/" class="color-inherit dim link">
-            Conceptual Mars Rover
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-         NASA NCAS Mars Rover Proposal
-        </div>
-          <a href="https://thymetravel.github.io/post/project-1/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
+      <h3 style="font-family:var(--sans);font-size:15px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin:34px 0 6px;">Built for fun</h3>
+      <p class="muted" style="margin:0 0 4px;font-size:15px;">Little browser games I coded — go ahead, waste a minute.</p>
+      <div class="games">
+        <a href="https://thymetravel.github.io/gamemaybe/" target="_blank" rel="noopener">🕹️ Pong</a>
+        <a href="https://thymetravel.github.io/snake/" target="_blank" rel="noopener">🐍 Snake</a>
+        <a href="https://thymetravel.github.io/breakout/" target="_blank" rel="noopener">🧱 Atari Breakout</a>
       </div>
     </div>
-  </div>
-</article>
+  </section>
 
-          </div>
-        
-          <div class="relative w-100 mb4">
-            
-<article class="bb b--black-10">
-  <div class="db pv4 ph3 ph0-l no-underline dark-gray">
-    <div class="flex flex-column flex-row-ns">
-      
-          
-        
-        <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
-          <a href="https://thymetravel.github.io/post/project-2/" class="db grow">
-            <img src="https://thymetravel.github.io/post/images/n250minus1.png" class="img" alt="image from Project 2: Panel Method Fluid Dynamics ">
-          </a>
-        </div>
-      
-      <div class="blah w-100 w-60-ns pl3-ns">
-        <h1 class="f3 fw1 athelas mt0 lh-title">
-          <a href="https://thymetravel.github.io/post/project-2/" class="color-inherit dim link">
-            Panel Method Fluid Dynamics 
-            </a>
-        </h1>
-        <div class="f6 f5-l lh-copy nested-copy-line-height nested-links">
-          Using the panel method to model fluid flow around a cylinder with and without rotation. Full support for varying panel sizes. Computational fluid dynamics using python. Paper is written in Latex. 
-        </div>
-          <a href="https://thymetravel.github.io/post/project-2/" class="ba b--moon-gray bg-light-gray br2 color-inherit dib f7 hover-bg-moon-gray link mt2 ph2 pv1">read more</a>
-        
+  <!-- ================= FOOTER ================= -->
+  <footer class="site">
+    <div class="wrap">
+      <div>
+        <div style="font-family:var(--serif);font-size:18px;color:#fff;">Basil Aranda</div>
+        <div class="muted" style="font-size:14px;">Aerospace &amp; Design Engineer · Huntington Beach, CA</div>
+      </div>
+      <div class="social">
+        <a href="https://www.linkedin.com/in/basil-aranda/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 65 65" xmlns="http://www.w3.org/2000/svg"><path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427H26.354z"/></svg>
+        </a>
+        <a href="https://github.com/ThymeTravel" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7C480,134.8,379.7,32,256,32z"/></svg>
+        </a>
       </div>
     </div>
-  </div>
-</article>
+    <div class="wrap muted" style="margin-top:22px;font-size:13px;">
+      <span class="muted">© <span id="yr"></span> Basil Aranda. Built by hand.</span>
+    </div>
+  </footer>
 
-          </div>
-        
-      </section>
-
-      
-
-      </div>
-  
-
-    </main>
-    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://thymetravel.github.io/" >
-    Home
-  </a>
-    <div>
-
-
-
-
-
-<a href="https://www.linkedin.com/in/basil-aranda/" target="_blank" class="link-transition linkedin link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
-  <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
-</svg>
-
-<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
-<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
-</svg>
-</span></a>
-
-
-<a href="https://github.com/ThymeTravel" target="_blank" class="link-transition github link dib z-999 pt3 pt0-l mr1" title="Github link" rel="noopener" aria-label="follow on Github——Opens in a new window">
-  <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
-  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
-</svg>
-
-<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000" width="8px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
-<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
-</svg>
-</span></a>
-
-
-
-
-
-
-</div>
-  </div>
-</footer>
-
-    
-
-  <script src="https://dataprofessor.github.io/Ken_Portfolio/dist/js/app.3fc0f988d21662902933.js"></script>
-
-
-  </body>
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
