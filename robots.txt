@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thymetravel.github.io/sitemap.xml
